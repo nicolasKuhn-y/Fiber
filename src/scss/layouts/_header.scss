@@ -1,0 +1,77 @@
+header {
+    display: flex;
+    justify-content: space-between;
+    background-color: getColor(primary_bg_color);
+    padding-top: $pd-4;
+}
+
+.navigation,
+.sign-in-out {
+    display: none;
+}
+
+.navigation.active {
+    display: block;
+    position: absolute;
+    width: 12.5rem;
+    top: 5rem;
+    left: 0;
+    right: 0;
+    margin: auto;
+    text-align: center;
+    background-color: getColor(primary_bg_color);
+    box-shadow: 0 0.375rem 0.9375rem 0.125rem getColor(primary_black_color);
+    border-radius: 0.2rem;
+    animation-duration: 350ms;
+    animation-name: moveIn;
+
+    li {
+        margin: $mg-3 0;
+    }
+}
+
+@keyframes moveIn {
+    from {
+        margin-top: -100%;
+    }
+
+    to {
+        margin-top: 0;
+    }
+}
+
+@include deskstopMedia() {
+    header {
+        padding-top: $pd-6;
+        align-items: center;
+
+        .mobile-menu {
+            display: none;
+        }
+    }
+
+    .navigation {
+        display: block;
+
+        ul {
+            display: flex;
+            gap: 1.5rem;
+            font-weight: 500;
+        }
+    }
+
+    .sign-in-out {
+        display: flex;
+        align-items: center;
+
+        & > a {
+            font-weight: 700;
+            margin-right: $mg-3;
+            width: 6.25rem;
+        }
+
+        button a {
+            color: inherit;
+        }
+    }
+}

@@ -1,0 +1,35 @@
+.features {
+    .text--purple {
+        font-weight: 700;
+        color: getColor(primary_blue_color);
+        margin-bottom: $mg-1;
+    }
+
+    h2 {
+        max-width: 35rem;
+    }
+}
+
+.feature {
+    margin: $mg-4 0;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+
+    & p {
+        max-width: 20rem;
+    }
+
+    h4 {
+        margin: $mg-1 0;
+    }
+}
+
+@include deskstopMedia() {
+    .features__container {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+}

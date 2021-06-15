@@ -1,0 +1,40 @@
+.testimonial {
+    border-radius: 0.5rem;
+    border: 0.0001rem solid getColor(primary_text_color);
+    margin: $mg-2 0;
+    padding: $pd-2;
+
+    p {
+        color: getColor(primary_black_color);
+    }
+
+    & > p {
+        font-weight: 500;
+        margin: $mg-2 0;
+        max-width: 22.5rem;
+    }
+}
+.avatar__container {
+    display: flex;
+    align-items: center;
+
+    .avatar__info {
+        display: flex;
+        flex-direction: column;
+        margin-left: $mg-1;
+
+        .avatar__name--purple {
+            color: getColor(primary_blue_color);
+            font-weight: 800;
+        }
+    }
+}
+
+@include deskstopMedia() {
+    .testimonials {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        margin-bottom: $mg-5;
+    }
+}

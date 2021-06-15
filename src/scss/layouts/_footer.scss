@@ -1,0 +1,41 @@
+.footer {
+    background-color: getColor(primary_bg_color);
+
+    .footer_company p {
+        margin: $mg-1 0;
+        max-width: 25rem;
+    }
+}
+
+.footer_nav {
+    margin: $mg-3 0;
+
+    ul {
+        margin: $mg-2 0;
+    }
+
+    li {
+        margin: $mg-1 0;
+    }
+}
+
+@include deskstopMedia() {
+    .footer {
+        display: flex;
+        padding: $pd-3 $pd-8;
+        gap: 1.5rem;
+
+        .footer_company :nth-child(3) {
+            margin-top: $mg-2;
+        }
+    }
+
+    .navigation-container {
+        display: flex;
+        gap: 5.3rem;
+
+        .footer_nav {
+            margin: 0;
+        }
+    }
+}

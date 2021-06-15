@@ -1,0 +1,77 @@
+.main__hero {
+    background-color: getColor(primary_bg_color);
+    padding-top: 0;
+
+    h1,
+    p {
+        margin: $mg-1 0;
+    }
+}
+
+.rating__container {
+    display: none;
+}
+
+.hero__content {
+    max-width: 31.25rem;
+
+    .container__links {
+        margin: $mg-2 0;
+        text-align: center;
+
+        a {
+            font-weight: 700;
+            text-decoration: underline;
+            color: getColor(primary_blue_color);
+        }
+    }
+}
+
+.advantage {
+    display: flex;
+    align-items: center;
+    margin: $mg-2 0;
+
+    img {
+        width: 1.4rem;
+    }
+
+    span {
+        margin-left: $mg-1;
+    }
+}
+
+@include deskstopMedia() {
+    .main__hero {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row-reverse;
+        padding: $pd-8;
+        margin-bottom: $mg-8;
+
+        & > img {
+            width: 50%;
+        }
+    }
+
+    .hero__content {
+        align-self: center;
+    }
+
+    .rating__container {
+        display: block;
+    }
+
+    .container__advantages {
+        display: flex;
+
+        .advantage:last-child {
+            margin-left: $mg-2;
+        }
+    }
+
+    .container__links {
+        display: flex;
+        align-items: center;
+    }
+}

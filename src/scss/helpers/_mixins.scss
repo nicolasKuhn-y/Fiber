@@ -1,0 +1,21 @@
+@mixin btn($color, $bg_color) {
+    cursor: pointer;
+    width: 100%;
+    border-radius: 0.3rem;
+    padding: $pd-2 0;
+    color: $color;
+    background-color: $bg_color;
+    transition: color 350ms ease, background-color 380ms ease-in-out;
+
+    &:hover {
+        color: $bg_color;
+        background-color: $color;
+        outline: 0.1rem auto $bg_color;
+    }
+}
+
+@mixin deskstopMedia() {
+    @media screen and (min-width: 64rem) {
+        @content;
+    }
+}

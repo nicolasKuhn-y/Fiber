@@ -1,0 +1,104 @@
+.form__container {
+    padding-top: $pd-8;
+    max-width: 37.5rem;
+
+    p {
+        font-weight: 500;
+        color: getColor(primary_black_color);
+    }
+
+    a {
+        color: getColor(primary_black_color);
+    }
+
+    form {
+        margin-top: $mg-5;
+
+        & > p {
+            text-align: center;
+        }
+    }
+}
+
+.input__container {
+    margin: $mg-3 0;
+
+    input {
+        width: 100%;
+        padding: $pd-1;
+        margin: $mg-1 0;
+        border-radius: 0.3rem;
+        border: 0.001rem solid getColor(primary_text_color);
+    }
+}
+
+#input__password {
+    position: relative;
+
+    &::after {
+        content: "";
+        background-image: url("../Assets/hidepassword.svg");
+        background-repeat: no-repeat;
+        position: absolute;
+        top: 2.2rem;
+        right: 1rem;
+        width: 1.5625rem;
+        height: 1.25rem;
+    }
+}
+
+.terms {
+    display: flex;
+    margin-bottom: $mg-3;
+
+    p {
+        margin-left: $mg-1;
+    }
+
+    .span--purple {
+        color: getColor(primary_blue_color);
+        text-decoration: underline;
+        text-decoration-thickness: 0.15rem;
+        font-weight: 700;
+    }
+}
+
+.span {
+    color: getColor(primary_blue_color);
+}
+
+.info__container {
+    display: none;
+}
+
+@include deskstopMedia() {
+    .form__container {
+        padding-right: 0;
+    }
+
+    .sign-up__main {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .info__container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0;
+        background-color: getColor(primary_blue_color);
+        width: 50%;
+        height: 100vh;
+
+        .templates-info {
+            text-align: center;
+            max-width: 25rem;
+
+            p,
+            h2 {
+                margin: $mg-2 0;
+                color: getColor(primary_white_color);
+            }
+        }
+    }
+}

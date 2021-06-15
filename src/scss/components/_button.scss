@@ -1,0 +1,36 @@
+.header_btn {
+    @include btn(getColor(primary_white_color), getColor(primary_blue_color));
+
+    padding-left: $pd-3;
+    padding-right: $pd-3;
+}
+
+.hero__btn {
+    @include btn(getColor(primary_white_color), getColor(primary_blue_color));
+    margin-bottom: $mg-2;
+
+    @include deskstopMedia() {
+        width: 40%;
+        margin-bottom: 0;
+        margin-right: $mg-2;
+    }
+}
+
+.portfolio__btn {
+    @include btn(getColor(primary_blue_color), getColor(primary_bg_color));
+    margin: $mg-2 0 $mg-6 0;
+
+    @include deskstopMedia() {
+        width: 40%;
+    }
+}
+
+.testimonial__btn {
+    @include btn(getColor(primary_blue_color), getColor(primary_white_color));
+    border: 0.0001rem solid getColor(primary_text_color);
+}
+
+.form__btn {
+    @include btn(getColor(primary_white_color), getColor(primary_blue_color));
+    margin-bottom: $mg-2;
+}

@@ -1,0 +1,41 @@
+.portfolio {
+    background-color: getColor(primary_blue_color);
+    padding: $pd-4 $pd-4 0;
+    margin: $mg-2;
+    border-radius: 0.5rem;
+
+    .portfolio__content {
+        h2,
+        p {
+            color: getColor(primary_white_color);
+        }
+
+        p {
+            font-weight: 300;
+            margin-top: $mg-1;
+            line-height: 1.55;
+            max-width: 24.375rem;
+        }
+    }
+
+    img {
+        vertical-align: text-bottom;
+    }
+}
+
+@include deskstopMedia() {
+    .portfolio {
+        display: flex;
+        justify-content: space-around;
+        margin: $mg-8;
+        padding: $pd-4 0 0;
+
+        img {
+            width: 50%;
+        }
+    }
+
+    .portfolio__content {
+        align-self: center;
+    }
+}
