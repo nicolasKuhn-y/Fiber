@@ -27,7 +27,7 @@
 
 .testimonial__btn {
     @include btn(getColor(primary_blue_color), getColor(primary_white_color));
-    border: 0.0001rem solid getColor(primary_text_color);
+    border: 0.1rem solid getColor(primary_text_color);
 }
 
 .form__btn {
