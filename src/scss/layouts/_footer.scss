@@ -10,12 +10,9 @@
 .footer_nav {
     margin: $mg-3 0;
 
-    ul {
-        margin: $mg-2 0;
-    }
-
+    ul,
     li {
-        margin: $mg-1 0;
+        margin: $mg-2 0;
     }
 }
 
@@ -32,7 +29,8 @@
 
     .navigation-container {
         display: flex;
-        gap: 5.3rem;
+        width: 60%;
+        justify-content: space-around;
 
         .footer_nav {
             margin: 0;

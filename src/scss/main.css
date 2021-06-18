@@ -260,12 +260,15 @@ header {
   }
   .navigation {
     display: block;
+    width: 30%;
   }
   .navigation ul {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    gap: 1.5rem;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
     font-weight: 500;
   }
   .sign-in-out {
@@ -525,12 +528,9 @@ header {
   margin: 1.5rem 0;
 }
 
-.footer_nav ul {
-  margin: 1rem 0;
-}
-
+.footer_nav ul,
 .footer_nav li {
-  margin: 0.5rem 0;
+  margin: 1rem 0;
 }
 
 @media screen and (min-width: 64rem) {
@@ -548,7 +548,9 @@ header {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    gap: 5.3rem;
+    width: 60%;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
   }
   .navigation-container .footer_nav {
     margin: 0;

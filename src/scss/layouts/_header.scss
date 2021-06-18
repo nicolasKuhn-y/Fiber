@@ -52,10 +52,11 @@ header {
 
     .navigation {
         display: block;
+        width: 30%;
 
         ul {
             display: flex;
-            gap: 1.5rem;
+            justify-content: space-evenly;
             font-weight: 500;
         }
     }
